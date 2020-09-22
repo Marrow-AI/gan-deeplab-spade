@@ -3,6 +3,8 @@
 Code for [‘Drawing’ the inner world of a story using GauGAN in a real environment](https://medium.com/@s.h.i.r.i.n/d8e303aaa2f9
 ).
 
+![gif](https://miro.medium.com/max/600/1*UIWX8IP9Gz4PREc7IRKoBw.gif)
+
 ## Installation
 
 Create and activate a conda environment from the suppplied file
@@ -43,7 +45,7 @@ Mappings between IDs and labels are found [here](https://github.com/Avnerus/deep
 
 
 ## Attribution
-- Feel free to use the code for any purpose, but we request that you attribute the work to _shirin anlen_ and _Avner Peled_ of the _Marrow_ project.
+- Feel free to use the code for any purpose, but we request that you attribute the work to [_shirin anlen_](https://github.com/ShirinStar) and [_Avner Peled_](https://github.com/avnerus/) of the [_Marrow_](https://shirin.works/Marrow-dev-phase-Machine-learning-immersive-theater-WIP) project.
 - Deeplab pytorch implementation by [Kazuto Nakashima](https://github.com/kazuto1011/deeplab-pytorch).
 - GauGAN SPADE implementation by [NVIDIA Corporation](https://github.com/NVlabs/SPADE).
 
