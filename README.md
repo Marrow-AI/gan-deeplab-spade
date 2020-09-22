@@ -43,7 +43,7 @@ Mappings between IDs and labels are found [here](https://github.com/Avnerus/deep
 
 
 ## Attribution
-Feel free to use the code for any purpose, but we request that you attribute the work to _Shirin Anlen_ and _Avner Peled_ of the _Marrow_ project.
+Feel free to use the code for any purpose, but we request that you attribute the work to _shirin anlen_ and _Avner Peled_ of the _Marrow_ project.
 
 Thank you and enjoy!
 
