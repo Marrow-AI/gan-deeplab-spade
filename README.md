@@ -3,7 +3,7 @@
 Code for [‘Drawing’ the inner world of a story using GauGAN in a real environment](https://medium.com/@s.h.i.r.i.n/d8e303aaa2f9
 ).
 
-![gif](https://miro.medium.com/max/600/1*UIWX8IP9Gz4PREc7IRKoBw.gif)
+![gif](https://media0.giphy.com/media/MhUBN7AEEFOjwjy78g/giphy.gif)
 
 ## Installation
 
