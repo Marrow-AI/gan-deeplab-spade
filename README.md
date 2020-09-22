@@ -35,7 +35,7 @@ Run the demo to generate images from your webcam:
 ```
 
 ## Label manipulation
-The demo transforms bottles (label ID 43) to flowers (label ID 118) in [this line](https://github.com/Marrow-AI/gan-deeplab-spade/blob/master/demo_spade.py#L285):
+The demo transforms bottles (label ID 43) into flowers (label ID 118) in [this line](https://github.com/Marrow-AI/gan-deeplab-spade/blob/master/demo_spade.py#L285):
 ```
 labelmap[labelmap == 43] = 118
 ```
