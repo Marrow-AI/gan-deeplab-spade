@@ -44,6 +44,9 @@ Mappings between IDs and labels are found [here](https://github.com/Avnerus/deep
 
 ## Attribution
 Feel free to use the code for any purpose, but we request that you attribute the work to _shirin anlen_ and _Avner Peled_ of the _Marrow_ project.
+Also:
+ - Deeplab pytorch implementation by [Kazuto Nakashima](https://github.com/kazuto1011/deeplab-pytorch).
+ - GauGAN SPADE implementation by [NVIDIA Corporation](https://github.com/NVlabs/SPADE).
 
 Thank you and enjoy!
 
