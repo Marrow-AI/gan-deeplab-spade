@@ -1,0 +1,23 @@
+name: deeplab-spade
+channels:
+  - defaults
+dependencies:
+  - python=3.6
+  - conda-forge::pydensecrf
+  - cython
+  - pip
+  - torchvision
+  - scipy
+  - matplotlib
+  - pyyaml
+  - tqdm
+  - click
+  - pytorch
+  - cudatoolkit=10.0
+  - pyparsing
+  - pip:
+    - gdown
+    - dill
+    - addict
+    - opencv-python
+prefix: /home/avnerus/miniconda3/envs/deeplab-spade
