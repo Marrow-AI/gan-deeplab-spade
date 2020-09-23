@@ -1,7 +1,6 @@
 # gan-deeplab-spade
 
-Code for [‘Drawing’ the inner world of a story using GauGAN in a real environment](https://medium.com/@s.h.i.r.i.n/d8e303aaa2f9
-).
+Code for [‘Drawing’ the inner world of a story using GauGAN in a real environment](https://towardsdatascience.com/drawing-the-inner-world-of-a-story-using-gaugan-in-a-real-environment-d8e303aaa2f9).
 
 ![gif](https://raw.githubusercontent.com/Marrow-AI/gan-deeplab-spade/master/gaugan.gif)
 
