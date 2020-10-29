@@ -1,6 +1,6 @@
 [submodule "deeplab-pytorch"]
 	path = deeplab-pytorch
-	url = git@github.com:Avnerus/deeplab-pytorch.git
+	url = ../deeplab-pytorch.git
 [submodule "SPADE"]
 	path = SPADE
-	url = git@github.com:Avnerus/SPADE.git
+	url = ../SPADE.git
