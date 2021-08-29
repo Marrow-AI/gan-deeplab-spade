@@ -18,20 +18,14 @@ conda env create --file environment.yml
 conda activate deeplab-spade
 ```
 
-Create a folder for the pre-trained snapshots
-
-```
-mkdir checkpoints
-````
-
 Download the DeepLabV2 CocoStuff checkpoint:
 ```
-mkdir checkpoints/deeplab
+mkdir -p checkpoints/deeplab
 gdown --id 18kR928yl9Hz4xxuxnYgg7Hpi36hM8J2d -O checkpoints/deeplab/deeplabv2_resnet101_msc-cocostuff164k-100000.pth
 ```
 Download and extract the SPADE checkpoint:
 ```
-mkdir checkpoints/spade
+mkdir -p checkpoints/spade
 gdown --id 12gvlTbMvUcJewQlSEaZdeb2CdOB-b8kQ -O checkpoints/spade/checkpoints.tar.gz
 tar xvf checkpoints/spade/checkpoints.tar.gz -C checkpoints/spade/
 ```
