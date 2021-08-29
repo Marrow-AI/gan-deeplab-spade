@@ -10,6 +10,7 @@ Clone the repository including its submodules
 ```
 git clone --recurse-submodules git@github.com:Marrow-AI/gan-deeplab-spade.git
 ```
+_You can safely ignore the error `Failed to recurse into submodule path 'SPADE'`_.
 
 Create and activate a conda environment from the suppplied file
 ```
@@ -17,6 +18,7 @@ cd gan-deeplab-spade
 conda env create --file environment.yml
 conda activate deeplab-spade
 ```
+**Note: The supplied environment requires a CUDA enabled GPU device. It may be possible to create your own environment without GPU acceleration.**
 
 Download the DeepLabV2 CocoStuff checkpoint:
 ```
