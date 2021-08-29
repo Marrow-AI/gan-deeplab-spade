@@ -8,7 +8,7 @@ Code for [‘Drawing’ the inner world of a story using GauGAN in a real enviro
 
 Clone the repository including its submodules
 ```
-git clone --recurse-submodules https://github.com/Marrow-AI/gan-deeplab-spade.git
+git clone --recurse-submodules git@github.com:Marrow-AI/gan-deeplab-spade.git
 ```
 
 Create and activate a conda environment from the suppplied file
