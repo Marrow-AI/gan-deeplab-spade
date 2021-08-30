@@ -251,14 +251,12 @@ def live(config_path, model_path, cuda, crf, camera_id):
     coco_dataset.initialize(opt)
     print(coco_dataset)
 
-
-
     # UVC camera stream
     cap = cv2.VideoCapture(camera_id)
     cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"YUYV"))
 
     def colorize(labelmap):
-        print(labelmap.shape)
+        #print(labelmap.shape)
         # Assign a unique color to each label
         labelmap = labelmap.astype(np.float32) / CONFIG.DATASET.N_CLASSES
         colormap = cm.jet_r(labelmap)[..., :-1] * 255.0
@@ -278,16 +276,22 @@ def live(config_path, model_path, cuda, crf, camera_id):
     while True:
         _, frame = cap.read()
         image, raw_image = preprocessing(frame, device, CONFIG)
-        #print("Image shape {}".format(image.shape))
         labelmap = inference(model, image, raw_image, postprocessor)
 
-        # Mao bottle to flower?
+        #print(labelmap)
+
+        # Map bottle to flower?
+
         labelmap[labelmap == 43] = 118
-        #colormap = colorize(labelmap)
+        
+        colormap = colorize(labelmap)
+
         uniques = np.unique(labelmap)
         instance_counter = 0
         instancemap = np.zeros(labelmap.shape)
-        print(uniques)
+
+        #print(uniques)
+        
         for label_id in uniques:
             mask = (labelmap == label_id)
             instancemap[mask] = instance_counter
@@ -300,6 +304,7 @@ def live(config_path, model_path, cuda, crf, camera_id):
         #labelimg.show()
 
         item = coco_dataset.get_item_from_images(labelimg, instanceimg)
+        
         generated = spade_model(item, mode='inference')
 
         generated_np = util.tensor2im(generated[0])
@@ -318,7 +323,9 @@ def live(config_path, model_path, cuda, crf, camera_id):
         #cv2.addWeighted(colormap, 1.0, raw_image, 0.0, 0.0, raw_image)
 
         # Quit by pressing "q" key
-        cv2.imshow(window_name, generated_rgb)
+        #cv2.imshow(window_name, generated_rgb)
+        #cv2.imshow(window_name, colormap)
+
         cv2.resizeWindow(window_name, 1024,1024)
         if cv2.waitKey(10) == ord("q"):
             break
