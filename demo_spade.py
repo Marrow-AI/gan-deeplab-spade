@@ -293,8 +293,6 @@ def live(config_path, model_path, cuda, crf, camera_id):
         instance_counter = 0
         instancemap = np.zeros(labelmap.shape)
 
-        #print(uniques)
-        
         for label_id in uniques:
             mask = (labelmap == label_id)
             instancemap[mask] = instance_counter
