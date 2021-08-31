@@ -1,5 +1,5 @@
 # Drawing the inner world of GauGAN
-_
+
 #### Ars Electronica hackathon.
 
 # Background
