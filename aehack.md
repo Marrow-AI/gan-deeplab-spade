@@ -92,7 +92,8 @@ labelmap[labelmap == 63] = 16 # Potted plant to cat
 mask = np.isin(labelmap, [118,16,0] , invert=True)
 labelmap[mask] = 156 #Everything else is sky (include person == 0)
 ```
+# Other things
 
-
-# About me
-[Hello](www.google.com)
+- NYTimes R&D: 3D Environmental photography and LiDAR scanning
+![](https://static01.nyt.com/images/2021/05/16/nyregion/16gospelchoirsA/merlin_186911460_81ee06a7-00dc-4daf-8702-8fb189da4555-superJumbo.jpg)
+[Story](https://www.nytimes.com/interactive/2021/05/12/nyregion/harlem-gospel-church-choir.html)
