@@ -113,6 +113,6 @@ labelmap[mask] = 156 #Everything else is sky (include person == 0)
 [Blog post](https://bit.ly/3kB9pO0)
 [Mediapipe Hands](https://google.github.io/mediapipe/solutions/hands.html)
 
-**Ask me about open source Inverse Reinforcement Learning**
+**Ask me about Inverse Reinforcement Learning**
 
 # Thank you
