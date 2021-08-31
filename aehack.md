@@ -1,6 +1,7 @@
 # Drawing the inner world of GauGAN
 
-#### Ars Electronica hackathon.
+#### Avner Peled
+#### @Ars Electronica hackathon.
 
 # Background
 
@@ -111,8 +112,19 @@ labelmap[mask] = 156 #Everything else is sky (include person == 0)
 <img src="https://cloud.avner.us/index.php/s/5SKY46rQtwqDq7A/download">
 
 [Blog post](https://bit.ly/3kB9pO0)
+
 [Mediapipe Hands](https://google.github.io/mediapipe/solutions/hands.html)
 
 **Ask me about Inverse Reinforcement Learning**
 
-# Thank you
+# More from Marrow
+#### Upcoming workshop with shirin anlen using two collaborative tools
+
+- [Workshop link](https://ars.electronica.art/newdigitaldeal/en/project-marrow/)
+
+- [Dataset preparation](https://dataset.tools)
+
+- [Latent space explorer](https://latentspace.tools)
+
+# DIY
+#### Try to experiment with deeplab-spade!
