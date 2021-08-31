@@ -5,6 +5,7 @@ Code for [‘Drawing’ the inner world of a story using GauGAN in a real enviro
 ![gif](https://raw.githubusercontent.com/Marrow-AI/gan-deeplab-spade/master/gaugan.gif)
 
 ## Installation
+ - **Make sure you are using an [SSH key](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) to connect to GitHub.**
 
 Clone the repository including its submodules
 ```
