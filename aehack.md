@@ -107,4 +107,12 @@ labelmap[mask] = 156 #Everything else is sky (include person == 0)
 # Other things
 
 - Aalto PhD: Telerobotic puppetry
-<img src="http://cloud.avner.us/index.php/s/48ZqJ7x5c297C4i/download">
+<img src="https://cloud.avner.us/index.php/s/48ZqJ7x5c297C4i/download">
+<img src="https://cloud.avner.us/index.php/s/5SKY46rQtwqDq7A/download">
+
+[Blog post](https://bit.ly/3kB9pO0)
+[Mediapipe Hands](https://google.github.io/mediapipe/solutions/hands.html)
+
+**Ask me about open source Inverse Reinforcement Learning**
+
+# Thank you
