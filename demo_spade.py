@@ -278,11 +278,14 @@ def live(config_path, model_path, cuda, crf, camera_id):
         image, raw_image = preprocessing(frame, device, CONFIG)
         labelmap = inference(model, image, raw_image, postprocessor)
 
-        #print(labelmap)
+        print(labelmap)
 
-        # Map bottle to flower?
+        #labelmap[labelmap == 43] = 118 # Bottle to flower
+        #labelmap[labelmap == 63] = 16 # Potted plant to cat
 
-        labelmap[labelmap == 43] = 118
+        # Everything else is sky (include person == 0)
+        #mask = np.isin(labelmap, [118,16,0] , invert=True)
+        #labelmap[mask] = 156
         
         colormap = colorize(labelmap)
 
@@ -297,24 +300,22 @@ def live(config_path, model_path, cuda, crf, camera_id):
             instancemap[mask] = instance_counter
             instance_counter += 1
 
-        labelimg = Image.fromarray(np.uint8(labelmap), 'L')
         instanceimg = Image.fromarray(np.uint8(instancemap),'L')
 
         
         #labelimg.show()
 
+        labelimg = Image.fromarray(np.uint8(labelmap), 'L')
         item = coco_dataset.get_item_from_images(labelimg, instanceimg)
-        
         generated = spade_model(item, mode='inference')
-
         generated_np = util.tensor2im(generated[0])
+        generated_rgb = cv2.cvtColor(generated_np, cv2.COLOR_BGR2RGB)
 
         # Masking
         #print("Generated image shape {} label resize shape {}".format(generated_np.shape, label_resized.shape))
         #label_resized = np.array(labelimg.resize((256,256), Image.NEAREST))
         #generated_np[label_resized != 118, :] = [0, 0, 0];
 
-        generated_rgb = cv2.cvtColor(generated_np, cv2.COLOR_BGR2RGB)
 
         # Register mouse callback function
         cv2.setMouseCallback(window_name, mouse_event, labelmap)

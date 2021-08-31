@@ -52,11 +52,47 @@ reflects upon the story and real-life happenings.
 - We can also see COCO-Stuff using:
 [DeepLab](https://github.com/tensorflow/models/tree/master/research/deeplab)
 
-```
+```python
         _, frame = cap.read() # Read from webcam
-        image, raw_image = preprocessing(frame, device, CONFIG) # Process image
+        image, raw_image = preprocessing(frame, device, CONFIG) #Format image
         labelmap = inference(model, image, raw_image, postprocessor) # Run model
 ```
+
+- **Demo**
+
+# SPADE
+#### Can we 'inject' a drawing?
+
+```python
+        labelimg = Image.fromarray(np.uint8(labelmap), 'L')
+        # Instance image derived from the labels
+        item = coco_dataset.get_item_from_images(labelimg, instanceimg)
+        generated = spade_model(item, mode='inference')
+        generated_np = util.tensor2im(generated[0])
+        generated_rgb = cv2.cvtColor(generated_np, cv2.COLOR_BGR2RGB)
+```
+
+# Let's play
+
+#### Manipulating GauGAN's world of COCO-stuff labels
+
+- The labels file:
+```
+./deeplab-pytorch/data/datasets/cocostuff/labels.txt
+```
+
+- Making a change:
+```python
+labelmap[labelmap == 43] = 118 # Map bottle to flower
+labelmap[labelmap == 63] = 16 # Potted plant to cat
+```
+
+- Clean up the scene
+```python
+mask = np.isin(labelmap, [118,16,0] , invert=True)
+labelmap[mask] = 156 #Everything else is sky (include person == 0)
+```
+
 
 # About me
 [Hello](www.google.com)
